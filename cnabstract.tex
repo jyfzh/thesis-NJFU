@@ -1,0 +1,11 @@
+超像素分割是近年兴起的一种计算机视觉技术，它通过将图像像素聚类/分割成若干个有意义的“像素团”，达到简了图像表示目的。目前，该技术已在计算机视觉、遥感技术等应用领域获得了广泛应用。本课题以此为背景，拟结合HQS（high quality superpixel）超像素技术，解决无人机高分遥感图像上的目标分割问题。主要研究内容如下：
+
+\begin{enumerate}
+\item 本文较为系统地研究了四种超像素技术，即SLIC（simple linear iterative clustering、LSC（Linear Spectral Clustering）、SEEDS（Superpixels Extracted via Energy-Driven Sampling）、HQS,并比较了它们在图像目标分割上的性能。
+
+\item 将HQS分割技术应用于无人机图像的目标分割。具体做法是：先用边缘提取方法RCF（Richer Convolutional Features for edge detection）对图像进行边缘提取，从而获得HQS分割所需的contour信息，再使用HQS对图像进行目标分割，并和SLIC、LSC、SEEDS的分割结果进行了比较。结果表明：HQS较其他方法具有更好的边缘一致性和更规则的超像素分割边界。
+
+\item 在实验平台搭建方面，本文的实验环境是基于Ubuntu操作系统，配备了NVIDIA显卡。在此平台上进行了测试、参数调整等能够充分利用GPU的计算能力，对HQS超像素分割算法进行有效的测试和优化。
+\end{enumerate}
+
+HQS超像素分割技术在公开基准数据集上展示了其优越的性能，不仅在生成规则性更强和边界贴合度更高的超像素方面超越了现有的先进算法，而且在计算效率方面也展现了竞争力。该方法在显著性检测等实际应用任务中，能够更准确地突出图像中的显著区域并保留重要的物体边界，尤其在利用无人机拍摄的图像进行分析时具有重要价值。
